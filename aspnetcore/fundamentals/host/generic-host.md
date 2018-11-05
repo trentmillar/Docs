@@ -187,7 +187,7 @@ The [sample app](https://github.com/aspnet/Docs/tree/master/aspnetcore/fundament
 
 To support plugging in other containers, the host can accept an [IServiceProviderFactory](/dotnet/api/microsoft.extensions.dependencyinjection.iserviceproviderfactory-1). Providing a factory isn't part of the DI container registration but is instead a host intrinsic used to create the concrete DI container. [UseServiceProviderFactory(IServiceProviderFactory&lt;TContainerBuilder&gt;)](/dotnet/api/microsoft.extensions.hosting.hostbuilder.useserviceproviderfactory) overrides the default factory used to create the app's service provider.
 
-Custom container configuration is managed by the [ConfigureContainer](/dotnet/api/microsoft.extensions.hosting.hostbuilder.configurecontainer) method. `ConfigureContainer` provides a strongly-typed experience for configuring the container on top of the underlying host API. `ConfigureContainer` can be called multiple times with additive results.
+Custom container configuration is managed by the [ConfigureContainer](/dotnet/api/microsoft.extensions.hosting.hostbuilder.configurecontainer) method. `ConfigureContainer` provides a strongly typed experience for configuring the container on top of the underlying host API. `ConfigureContainer` can be called multiple times with additive results.
 
 Create a service container for the app:
 
@@ -285,11 +285,11 @@ public class Program
 }
 ```
 
-### Start and StopAsync
+### Start and StopAsync(TimeSpan) extension methods
 
-[Start](/dotnet/api/microsoft.extensions.hosting.hostingabstractionshostextensions.start) starts the host synchronously.
+[HostingAbstractionsHostExtensions.Start](/dotnet/api/microsoft.extensions.hosting.hostingabstractionshostextensions.start) starts the host synchronously.
 
-[StopAsync(TimeSpan)](/dotnet/api/microsoft.extensions.hosting.hostingabstractionshostextensions.stopasync) attempts to stop the host within the provided timeout.
+[HostingAbstractionsHostExtensions.StopAsync(TimeSpan)](/dotnet/api/microsoft.extensions.hosting.hostingabstractionshostextensions.stopasync) attempts to stop the host within the provided timeout.
 
 ```csharp
 public class Program
@@ -309,11 +309,11 @@ public class Program
 }
 ```
 
-### StartAsync and StopAsync
+### StartAsync and StopAsync methods
 
-[StartAsync](/dotnet/api/microsoft.extensions.hosting.ihost.startasync) starts the app.
+[IHost.StartAsync](/dotnet/api/microsoft.extensions.hosting.ihost.startasync) starts the app.
 
-[StopAsync](/dotnet/api/microsoft.extensions.hosting.ihost.stopasync) stops the app.
+[IHost.StopAsync](/dotnet/api/microsoft.extensions.hosting.ihost.stopasync) stops the app.
 
 ```csharp
 public class Program
