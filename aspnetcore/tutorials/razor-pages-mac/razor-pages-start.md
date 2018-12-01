@@ -5,7 +5,7 @@ description: Discover how to get started with Razor Pages in ASP.NET Core using 
 monikerRange: '>= aspnetcore-2.0'
 ms.author: riande
 ms.custom: mvc
-ms.date: 10/24/2018
+ms.date: 12/01/2018
 uid: tutorials/razor-pages-mac/razor-pages-start
 ---
 # Get started with Razor Pages in ASP.NET Core on macOS with Visual Studio for Mac
@@ -52,11 +52,11 @@ The preceding commands use the [.NET Core CLI](/dotnet/core/tools/dotnet) to cre
 
 Press Ctrl+C to shut down the application.
 
-From Visual Studio, select **File > Open**, and then select the *RazorPagesMovie.csproj* file.
+From Visual Studio, select **File** > **Open**, and then select the *RazorPagesMovie.csproj* file.
 
 ### Launch the app
 
-In Visual Studio, select **Run > Start Without Debugging** to launch the app. Visual Studio starts [Kestrel](xref:fundamentals/servers/kestrel), launches a browser, and navigates to `http://localhost:5000`.
+In Visual Studio, select **Run** > **Start Without Debugging** to launch the app. Visual Studio starts [Kestrel](xref:fundamentals/servers/kestrel) server, launches a browser, and navigates to `http://localhost:5000`.
 
 In the next tutorial, we add a model to the project.
 
