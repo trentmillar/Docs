@@ -7,7 +7,6 @@ using StartupFilterSample.Models;
 
 namespace StartupFilterSample
 {
-    #region snippet1
     public class RequestSetOptionsMiddleware
     {
         private readonly RequestDelegate _next;
@@ -34,5 +33,4 @@ namespace StartupFilterSample
             await _next(httpContext);
         }
     }
-    #endregion
 }

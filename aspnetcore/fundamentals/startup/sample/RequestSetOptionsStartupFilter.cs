@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace StartupFilterSample
 {
-    #region snippet1
     public class RequestSetOptionsStartupFilter : IStartupFilter
     {
         public Action<IApplicationBuilder> Configure(Action<IApplicationBuilder> next)
@@ -16,5 +15,4 @@ namespace StartupFilterSample
             };
         }
     }
-    #endregion
 }
