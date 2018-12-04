@@ -8,16 +8,13 @@ namespace RoutingSample
 {
     public class Startup
     {
-        #region snippet_ConfigureServices
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRouting();
         }
-        #endregion
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            #region snippet_RouteHandler
             var trackPackageRouteHandler = new RouteHandler(context =>
             {
                 var routeValues = context.GetRouteData().Values;
@@ -42,9 +39,7 @@ namespace RoutingSample
 
             var routes = routeBuilder.Build();
             app.UseRouter(routes);
-            #endregion
 
-            #region snippet_Dictionary
             app.Run(async (context) =>
             {
                 var dictionary = new RouteValueDictionary
@@ -62,7 +57,6 @@ namespace RoutingSample
                 await context.Response.WriteAsync(
                     $"<a href='{path}'>Create Package 123</a><br/>");
             });
-            #endregion
         }
     }
 }
